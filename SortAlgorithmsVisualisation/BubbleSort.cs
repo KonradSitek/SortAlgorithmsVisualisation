@@ -16,7 +16,7 @@ namespace SortAlgorithmsVisualisation
         private int MaxVal;
 
         Brush Lighter = new System.Drawing.SolidBrush(System.Drawing.Color.LightSeaGreen);
-        Brush Darker = new System.Drawing.SolidBrush(System.Drawing.Color.DarkSlateGray);
+        Brush Darker = new System.Drawing.SolidBrush(System.Drawing.Color.GhostWhite);
        
 
 
@@ -46,7 +46,7 @@ namespace SortAlgorithmsVisualisation
 
 
 
-        private async void Swap(int i, int p)
+        private void Swap(int i, int p)
         {
             int temp = TheArray[i];
             TheArray[i] = TheArray[i + 1];

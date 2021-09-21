@@ -14,7 +14,7 @@ namespace SortAlgorithmsVisualisation
         private Graphics g;
         private int MaxVal;
         Brush Lighter = new System.Drawing.SolidBrush(System.Drawing.Color.LightSeaGreen);
-        Brush Darker = new System.Drawing.SolidBrush(System.Drawing.Color.DarkSlateGray);
+        Brush Darker = new System.Drawing.SolidBrush(System.Drawing.Color.GhostWhite);
 
 
         public void SortAlg(int[] TheArray_In, Graphics g_In, int MaxVal_In)
@@ -45,11 +45,10 @@ namespace SortAlgorithmsVisualisation
             {
                 while (pivot > TheArray[++i]) ;
 
-                while (pivot < TheArray[--j]) ;
+                while (pivot < TheArray[--j] && j > 1) ;
+              
 
-               
-
-
+              
                 if (i <= j)
                     Swap(i, j);
 
@@ -60,7 +59,7 @@ namespace SortAlgorithmsVisualisation
 
         }
 
-        private async void Swap(int i, int p)
+        private void Swap(int i, int p)
         {
             int temp = TheArray[i];
             TheArray[i] = TheArray[p];

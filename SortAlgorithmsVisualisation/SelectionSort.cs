@@ -9,24 +9,23 @@ namespace SortAlgorithmsVisualisation
 {
     class SelectionSort : iSort
     {
-        private bool _sorted = false;
+     
         private int[] TheArray;
         private Graphics g;
         private int MaxVal;
 
         Brush LightSeaGreenBrush = new System.Drawing.SolidBrush(System.Drawing.Color.LightSeaGreen);
-        Brush DarkSlateGrayBrush = new System.Drawing.SolidBrush(System.Drawing.Color.DarkSlateGray);
+        Brush DarkSlateGrayBrush = new System.Drawing.SolidBrush(System.Drawing.Color.GhostWhite);
 
 
-        public async void SortAlg(int[] TheArray_In, Graphics g_In, int MaxVal_In)
+        public void SortAlg(int[] TheArray_In, Graphics g_In, int MaxVal_In)
         {
             TheArray = TheArray_In;
             g = g_In;
             MaxVal = MaxVal_In;
 
 
-            while (!_sorted)
-            {
+            
 
                 int mn_index;
 
@@ -37,16 +36,16 @@ namespace SortAlgorithmsVisualisation
                         if (TheArray[j] < TheArray[mn_index])
                             mn_index = j;
 
-                    await Task.Delay(1);
+                    
 
                     Swap(i, mn_index);
 
                 }
 
               
-            }
+            
 
-            _sorted = IsSorted();
+            
         }
         private void Swap(int i, int mn_index)
         {
@@ -64,13 +63,7 @@ namespace SortAlgorithmsVisualisation
         }
 
 
-        private bool IsSorted()
-        {
-            for (int i = 0; i < TheArray.Count() - 1; i++) if (TheArray[i] > TheArray[i + 1]) return false;
-           
-            return true;
-
-        }
+       
     }
 
     
