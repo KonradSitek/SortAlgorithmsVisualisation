@@ -9,6 +9,6 @@ namespace SortAlgorithmsVisualisation
 {
     interface iSort
     {
-        void DoWork(int[] TheArray, Graphics g, int MaxVal);
+        void SortAlg(int[] TheArray, Graphics g, int MaxVal);
     }
 }

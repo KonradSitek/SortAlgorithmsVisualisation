@@ -41,5 +41,42 @@ namespace SortAlgorithmsVisualisation
             
 
         }
+
+        private void BubbleButton_Click(object sender, EventArgs e)
+        {
+            iSort sort = new BubbleSort();
+            if(IsSorted(TheArray) == false) sort.SortAlg(TheArray, g, ActionPanel.Height);
+        }
+
+        private void HeapButton_Click(object sender, EventArgs e)
+        {
+            iSort sort = new HeapSort();
+            if (IsSorted(TheArray) == false) sort.SortAlg(TheArray, g, ActionPanel.Height);
+        }
+
+        private void SelectionButton_Click(object sender, EventArgs e)
+        {
+            iSort sort = new SelectionSort();
+            if (IsSorted(TheArray) == false) sort.SortAlg(TheArray, g, ActionPanel.Height);
+
+        }
+
+
+        private void QuickButton_Click(object sender, EventArgs e)
+        {
+            iSort sort = new QuickSort();
+            if (IsSorted(TheArray) == false) sort.SortAlg(TheArray, g, ActionPanel.Height);
+
+        }
+
+        private bool IsSorted(int[] TheArray)
+        {
+            for (int i = 0; i < TheArray.Count() - 1; i++) if (TheArray[i] > TheArray[i + 1]) return false;
+           
+            return true;
+
+        }
+
+        
     }
 }
